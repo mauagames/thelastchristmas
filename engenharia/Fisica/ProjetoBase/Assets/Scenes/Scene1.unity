@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 254021874}
   - component: {fileID: 254021877}
   - component: {fileID: 254021876}
+  - component: {fileID: 254021878}
   m_Layer: 9
   m_Name: Calango
   m_TagString: Ally
@@ -412,7 +413,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: be5e4b1d1a42c4725b2b7a179d68be80, type: 3}
   m_Color: {r: 0.4554364, g: 0.9632353, b: 0.16290008, a: 1}
   m_FlipX: 0
@@ -481,6 +482,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.04, y: 2.49}
   m_EdgeRadius: 0
+--- !u!114 &254021878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254021873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29813f7a5f8fd46cda5c16697f835c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oculto: 0
+  camera: {fileID: 1230423529}
+  posRelativa: {x: -10, y: 2}
+  rb: {fileID: 0}
+  pushForce: 10
+  player: {fileID: 194955237}
+  trocar: 0
 --- !u!1 &1230423529
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 194955237}
+  ajuste: {x: 4, y: 0}
 --- !u!1 &1725620827
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +613,7 @@ GameObject:
   - component: {fileID: 1725620829}
   - component: {fileID: 1725620828}
   - component: {fileID: 1725620830}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
