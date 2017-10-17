@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangePlayer : MonoBehaviour {
 
+	[Header ("Declarations:")]
 	public GameObject camera;
 	public GameObject otherPlayer;
 	public GameObject child;
@@ -11,11 +12,17 @@ public class ChangePlayer : MonoBehaviour {
 	public Rigidbody2D rb;
 	private Animator anim;
 
+	[Header ("Player Status:")]
 	public bool hidden;
+	public bool switching;
+
+	[Header ("Hidden Position:")]
 	public Vector2 posRelative;
+
+	[Header ("Change Speed:")]
 	public float speed;
 
-	public bool switching;
+	public AnimationCurve curveIn;
 
 	[HideInInspector]
 	public Vector3 tempPosition;
@@ -54,7 +61,7 @@ public class ChangePlayer : MonoBehaviour {
 			rb.Sleep ();
 			this.GetComponent<BoxCollider2D> ().enabled = false;
 			this.camera.GetComponent<CameraFollow> ().canMove = false;
-			float step = speed * Time.deltaTime;
+			float step = speed * Time.deltaTime; //speed * curveIn.Evaluate (Time.deltaTime) * transform.position.y; //speed * Time.deltaTime;
 			this.transform.position = Vector3.MoveTowards (this.transform.position, tempPosition, step);
 		}
 	}

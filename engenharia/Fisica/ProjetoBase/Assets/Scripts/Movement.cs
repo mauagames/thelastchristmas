@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+	[Header ("Enable Movement:")]
 	public bool canMove;
 
+	[Header ("Movement Properties:")]
 	public float velocity;
 	public float jumpForce;
 	[HideInInspector]
 	public Rigidbody2D rb;
 	public bool canJump = false;
 	public bool doubleJump = false;
+
+	[Header ("Current Speed:")]
 	public float speed;
 
 	// Use this for initialization

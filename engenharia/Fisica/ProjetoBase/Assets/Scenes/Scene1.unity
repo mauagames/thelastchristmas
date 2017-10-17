@@ -368,9 +368,15 @@ MonoBehaviour:
   child: {fileID: 103252205}
   rb: {fileID: 0}
   hidden: 0
+  switching: 0
   posRelative: {x: -13, y: 0}
   speed: 10
-  switching: 0
+  curveIn:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   tempPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &194955240
 Transform:
@@ -530,8 +536,8 @@ GameObject:
   - component: {fileID: 309776914}
   - component: {fileID: 309776917}
   - component: {fileID: 309776916}
-  - component: {fileID: 309776915}
   - component: {fileID: 309776918}
+  - component: {fileID: 309776915}
   m_Layer: 9
   m_Name: Ally
   m_TagString: Ally
@@ -569,9 +575,27 @@ MonoBehaviour:
   child: {fileID: 254021873}
   rb: {fileID: 0}
   hidden: 0
+  switching: 0
   posRelative: {x: -13, y: 0}
   speed: 10
-  switching: 0
+  curveIn:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1.0099792
+      inSlope: -0.21176875
+      outSlope: -0.21176875
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.98223877
+      value: 0.006713867
+      inSlope: -3.0077007
+      outSlope: -3.0077007
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
   tempPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &309776916
 Rigidbody2D:
@@ -867,6 +891,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSwitch: 0
+  canThrow: 0
+  counter: 0
+  limit: 5
+  player2: 1
+  player3: 1
 --- !u!4 &1757883359
 Transform:
   m_ObjectHideFlags: 0
