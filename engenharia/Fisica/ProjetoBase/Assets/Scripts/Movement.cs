@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-	public Vector3 spawnPoint;
+	public bool canMove;
+
 	public float velocity;
 	public float jumpForce;
 	[HideInInspector]
@@ -12,33 +13,17 @@ public class Movement : MonoBehaviour {
 	public bool canJump = false;
 	public bool doubleJump = false;
 	public float speed;
-	private bool receiveInput;
 
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D> ();
-		spawnPoint = this.transform.position;
-		receiveInput = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (!receiveInput)
+		if (!canMove)
 			return;
-		/*
-		if (Input.GetKey(KeyCode.RightArrow)) {
-			transform.Translate ( new Vector3(velocidade * Time.deltaTime, 0f, 0f));
-			this.GetComponent<SpriteRenderer> ().flipX = false;
-			print ("Direita");
-		}
-
-		if (Input.GetKey(KeyCode.LeftArrow)) {
-			transform.Translate ( new Vector3(-velocidade * Time.deltaTime, 0f, 0f));
-			this.GetComponent<SpriteRenderer> ().flipX = true;
-			print ("Esquerda");
-		}
-		*/
 
 		double h = Input.GetAxis ("Horizontal");
 		//double v = Input.GetAxis ("Vertical");
@@ -81,12 +66,12 @@ public class Movement : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator Respawn() {
+	/*public IEnumerator Respawn() {
 		receiveInput = false;
 		yield return new WaitForSeconds (1);
 		this.transform.position = spawnPoint;
 		yield return new WaitForSeconds (1);
 		receiveInput = true;
-	}
+	}*/
 
 }
