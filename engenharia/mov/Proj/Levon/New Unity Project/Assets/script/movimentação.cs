@@ -9,11 +9,11 @@ public class movimentação : MonoBehaviour {
     private Rigidbody2D rb;
     public bool podePular = false;
     private int count = 2;              //numero de pulso possiveis
-
+    public Transform parent;
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody2D>();
-
+        rb = this.GetComponentInParent<Rigidbody2D>();
+        
     }
 	
 	// Update is called once per frame
@@ -37,8 +37,8 @@ public class movimentação : MonoBehaviour {
         float v = Input.GetAxis("Vertical");
 
         // transform.Translate(new Vector3(h*velocidade * Time.deltaTime, v * velocidade * Time.deltaTime, 0));
-        transform.Translate(new Vector3(h * velocidade * Time.deltaTime, 0, 0));
-
+        //transform.Translate(new Vector3(h * velocidade * Time.deltaTime, 0, 0));
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && (count > 0))
         {
@@ -55,14 +55,16 @@ public class movimentação : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D objeto)
     {
-        if (objeto.gameObject.CompareTag("chao"))
+        if (objeto.gameObject.CompareTag("plataforma"))
            count = 2;
+
+
     }
 
    
     void OnCollisionExit2D(Collision2D objeto)
     {
-        if (objeto.gameObject.CompareTag("chao"))
+        if (objeto.gameObject.CompareTag("plataforma"))
             podePular = false;
     }
 

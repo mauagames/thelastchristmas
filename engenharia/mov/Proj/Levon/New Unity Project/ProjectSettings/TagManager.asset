@@ -9,6 +9,7 @@ TagManager:
   - chao
   - tumba
   - gatilho
+  - plataforma
   layers:
   - Default
   - TransparentFX
