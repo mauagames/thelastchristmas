@@ -18,26 +18,13 @@ public class movimentação : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        if ( Input.GetKey(KeyCode.RightArrow) )
-        {
-            transform.Translate(new Vector3(velocidade * Time.deltaTime, 0, 0));
-            print("direita");
-        }
-
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(new Vector3(-velocidade * Time.deltaTime, 0, 0));
-            print("esquerda");
-        }
-        */
+      
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // transform.Translate(new Vector3(h*velocidade * Time.deltaTime, v * velocidade * Time.deltaTime, 0));
-        //transform.Translate(new Vector3(h * velocidade * Time.deltaTime, 0, 0));
+        transform.parent.Translate(new Vector3(h*velocidade * Time.deltaTime, v * velocidade * Time.deltaTime, 0));
+        transform.parent.Translate(new Vector3(h * velocidade * Time.deltaTime, 0, 0));
         
 
         if (Input.GetKeyDown(KeyCode.Space) && (count > 0))
@@ -65,7 +52,10 @@ public class movimentação : MonoBehaviour {
     void OnCollisionExit2D(Collision2D objeto)
     {
         if (objeto.gameObject.CompareTag("plataforma"))
+        {
             podePular = false;
+            count=1;
+        }
     }
 
 
