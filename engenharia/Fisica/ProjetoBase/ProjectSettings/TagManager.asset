@@ -8,6 +8,7 @@ TagManager:
   - Crate
   - Enemy
   - Ally
+  - Support
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Object
   - Wall
   - Enemy
-  - 
+  - Support
   - 
   - 
   - 

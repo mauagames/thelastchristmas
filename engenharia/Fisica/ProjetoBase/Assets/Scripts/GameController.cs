@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 
 	private ChangePlayer player;
 	private ChangePlayer ally;
+	private ThrowSupport support;
 
 	[Header ("Can Switch Players 1 and 2:")]
 	public bool canSwitch;
@@ -28,7 +29,9 @@ public class GameController : MonoBehaviour {
 	public float counter;
 	public float limit;
 
-	[Header ("Active Players:")]
+	public bool throwing;
+
+	[Header ("Activate Players:")]
 	public bool player2;
 	public bool player3;
 
@@ -36,6 +39,8 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<ChangePlayer>();
 		ally = GameObject.FindGameObjectWithTag ("Ally").GetComponent<ChangePlayer>();
+		if (player3)
+			support = GameObject.FindGameObjectWithTag ("Support").GetComponent<ThrowSupport> ();
 		player.hidden = false;
 		ally.hidden = true;
 		counter = 0;
@@ -46,7 +51,7 @@ public class GameController : MonoBehaviour {
 
 		if (Input.GetKeyUp (KeyCode.Z) && canSwitch && 
 			(GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().canJump || 
-				GameObject.FindGameObjectWithTag("Ally").GetComponent<Movement>().canJump) && player2) {
+				GameObject.FindGameObjectWithTag("Ally").GetComponent<Movement>().canJump) && player2 &&  (counter < 0.5f) && !throwing) {
 			player.tempPosition = ally.transform.position;
 			ally.tempPosition = player.transform.position;
 			canSwitch = false;
@@ -56,17 +61,22 @@ public class GameController : MonoBehaviour {
 			ally.switching = true;
 		}
 
+		if (Input.GetKey (KeyCode.Z) && player3 && canThrow && ally.hidden && !throwing && canSwitch) {
+			counter += Time.deltaTime;
+			if (counter >= limit) {
+				support.aiming = true;
+				counter = limit;
+				throwing = true;
+			}
+		} else
+			counter = 0;
+
 		if (!player.switching && !ally.switching)
 			canSwitch = true;
 
-		if (Input.GetKey (KeyCode.Z) && player3 && canThrow && ally.hidden) {
-			counter += 0.1f;
-			if (counter >= limit) {
-				//canThrow = false;
-				counter = limit;
-			}
-		} else {
-			counter = 0;
+		if (!support.active && !support.aiming && !support.charging) {
+			canThrow = true;
+			throwing = false;
 		}
 	}
 }
