@@ -1,0 +1,8 @@
+
+MusicLooper.cs
+
+1) Crie 2 sources de áudio em seu objeto,
+2) Adicione o script ao objeto.
+3) Adicione as músicas e complete as variáveis públicas com os valores de comprimento total da música e comprimento do loop.
+
+Diogo Slepetys
