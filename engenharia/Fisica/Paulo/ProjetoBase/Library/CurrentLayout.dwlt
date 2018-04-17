@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 1
-  controlID: 107
+  controlID: 71
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 108
+  controlID: 72
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 109
+  controlID: 29
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 73
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -333,9 +333,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 588
+    y: 501
     width: 894
-    height: 430
+    height: 557
   m_AnimEditor: {fileID: 0}
   m_Locked: 0
 --- !u!114 &15
@@ -538,14 +538,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 588
+    y: 501
     width: 894
-    height: 430
+    height: 557
   m_ViewPositions:
     m_KeySerializationHelper:
     - {fileID: 1107585978548110596, guid: 4265acd1ae7cb42ac9f3e628b55e8973, type: 2}
     m_ValueSerializationHelper:
-    - {x: 486.40002, y: 238.00002}
+    - {x: 486.40002, y: 285.40002}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -587,9 +587,9 @@ MonoBehaviour:
     height: 480
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44270000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_SelectedIDs: d8270000
+    m_LastClickedID: 10200
+    m_ExpandedIDs: 9efbffff00000000ea270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -650,19 +650,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Textures
   m_ViewMode: 1
   m_StartGridSize: 51
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Textures
   m_LastFoldersGridSize: 51
   m_LastProjectPath: /home/paulo/Desktop/thelastchristmas/engenharia/Fisica/Paulo/ProjetoBase
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 32270000
-    m_LastClickedID: 10034
-    m_ExpandedIDs: 00000000e826000000ca9a3bffffff7f
+    m_SelectedIDs: 7c270000
+    m_LastClickedID: 10108
+    m_ExpandedIDs: 00000000e82600007c27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -690,7 +690,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8260000
+    m_ExpandedIDs: 00000000e82600007c270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -718,7 +718,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: be1c0000741c00007c1c0000901e0000a81c0000de0400000c48ffffd80afdff50330000861e00000a1f0000281f0000301f0000381f00007a1f00003ee7ffffea040000ee040000de6e0000723b0000cc3d0000d43d0000c01c0000c41c0000801c00007a96ffff681c0000e4040000582b0000a6edffffdc99feffbe1d00000ebcfdff600500002c1c0000241c0000a2050000506f00008a0500009405000010060000f2040000f0040000f80400000205000074680000fa04000034060000fe040000fc04000000050000a00500003a060000a8360000f244f4ffbc66000066ddfcff00000000dc240000e6240000f22400001225000082250000142500005ac4f7ffea27f7ffa417f7ff16250000a825000042260000242500001eb20100f01ef5ffdcde020060ecf3ffb01bf1ff20250000fc4fffff069401000ec50100a492edff340b0900302500004c280000e227000018edffff565f000060250000be260000a03a0000bc3600002c250000c28505004e250000bc240000c813feffc4240000ba240000be240000c82400005228000084250000be250000182500001a250000e22500000adfffff1c250000622e0000382b00007c26000028380000682700004a26000038690000ce300000c62c0000142900003c2900003c420000c4420000dacef8ff64270000102b0000ca25000040290000
+    m_ExpandedInstanceIDs: be1c0000741c00007c1c0000901e0000a81c0000de0400000c48ffffd80afdff50330000861e00000a1f0000281f0000301f0000381f00007a1f00003ee7ffffea040000ee040000de6e0000723b0000cc3d0000d43d0000c01c0000c41c0000801c00007a96ffff681c0000e4040000582b0000a6edffffdc99feffbe1d00000ebcfdff600500002c1c0000241c0000a2050000506f00008a0500009405000010060000f2040000f0040000f80400000205000074680000fa04000034060000fe040000fc04000000050000a00500003a060000a8360000f244f4ffbc66000066ddfcff00000000dc240000e6240000f22400001225000082250000142500005ac4f7ffea27f7ffa417f7ff16250000a825000042260000242500001eb20100f01ef5ffdcde020060ecf3ffb01bf1ff20250000fc4fffff069401000ec50100a492edff340b0900302500004c280000e227000018edffff565f000060250000be260000a03a0000bc3600002c250000c28505004e250000bc240000c813feffc4240000ba240000be240000c82400005228000084250000be250000182500001a250000e22500000adfffff1c250000622e0000382b00007c26000028380000682700004a26000038690000ce300000c62c0000142900003c2900003c420000c4420000dacef8ff64270000102b0000ca25000040290000fe2900007c2700009c2700006a330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +734,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
