@@ -68,4 +68,5 @@ public class ChangePlayer : MonoBehaviour
 			this.transform.position = Vector3.MoveTowards (this.transform.position, tempPosition, step);
 		}
 	}
+
 }
